@@ -6,8 +6,8 @@ defmodule Misbehave.Math do
   def sum_to(max) do
     case max do
       0 -> 0
-      1337 -> sum_to(max)
-      x -> x + sum_to(x - 1)
+      1337 -> __MODULE__.sum_to(max)
+      x -> x + __MODULE__.sum_to(x - 1)
     end
   end
 end
