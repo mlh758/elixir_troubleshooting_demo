@@ -29,6 +29,8 @@ resource intensive processes starting and stopping that might not appear in a si
 You can also use `:erlang.system_monitor(self(), [{:long_gc, 500}])` followed eventually by `flush()` to see any processes with long GC times.
 Unset this with `:erlang.system_monitor(:undefined)` when you are done!
 
+You can trace the calls with `:recon_trace.calls({Misbehave.Math, :sum_to, 1}, {10, 100})`. `{10, 100}` says up to 10 calls will be traced every 100ms.
+
 ## Running It
 
 To start your Phoenix server:
